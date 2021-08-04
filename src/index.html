@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="index.css">
+    <title>Telemetry</title>
+    <meta http-equiv="Content-Security-Policy" content="script-src 'self' 'unsafe-inline';" />
+</head>
+<body>
+    <div class="titlebar">
+        <button class="titlebar-btn" id="close">X</button>
+        <button class="titlebar-btn" id="min">-</button>
+        <p id="title">Telemetry</p>
+    </div>
+    <div class="analysis" id="analysisDvi">
+        <h1>This is a chart page</h1>
+    </div>
+    <div class="csvTable">
+        <table id="csvRoot"></table>
+    </div>
+    <div id="button_frame">
+        <label for="csvFileInput" class="custom_fileUpload">Load File
+            <input type="file" id="csvFileInput">
+        </label>
+        <button class="button" id="pred_btn">Predict</button>
+        <div class="select">
+                <select name="slct" id="slct">
+                        <option selected disabled>Choose a Model</option>
+                        <option value="1">Logistic Regression</option>
+                        <option value="2">Randon Forest Classifier</option>
+                        <option value="3">Decision Tree</option>
+                </select>
+        </div>
+        <input type="text" id="search_id" placeholder="Search ID" onkeyup="search_element()">
+        <button class="button" id="search_btn">Search</button>
+        <button class="button" id="anyl_btn">Analysis</button>
+    </div>
+    <script src="papaparse.min.js"></script>
+    <script type="module" src="Tablecsv.js"></script>
+    <script type="module" src="render.js"></script>
+    <script type="module" src="analysisChart.js"></script>
+    
+    <script src="SearchTable.js"></script>
+    <script src="titileBar.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,372 @@
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  background-color: #161722;
+  margin:0;
+  padding:0;
+}
+
+* {
+  -webkit-tap-highlight-color: rgba(255, 255, 255, 0) !important; 
+  -webkit-focus-ring-color: rgba(255, 255, 255, 0) !important; 
+  outline: none !important;
+} 
+
+/* Titlebar */
+
+.titlebar
+{
+  color: white;
+  background-color:#0d0e18;
+  font-family: 'Courier New', Courier, monospace;
+  position: relative;
+  z-index: 9999;
+  width: 100%;
+  height: 30px;
+  display: flex;
+  flex-direction:row-reverse ;
+  text-align: center;
+  -webkit-app-region: drag;
+}
+
+.titlebar-btn
+{
+
+  background-color: #0d0e18;
+  color: #8d8daa;
+  border: none;
+  width: 50px;
+  text-align: center;
+  font-size: 13px;
+  font-weight: bold;
+  -webkit-app-region: no-drag;
+}
+
+#title
+{
+  padding: 0;
+  margin: auto;
+  color: #8d8daa;
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
+  display: table-cell;
+  -webkit-app-region: no-drag;
+}
+
+#title:hover
+{
+  color: #ffffff;
+  transition: 0.9s;
+}
+
+
+#close:hover
+{
+  background-color: rgb(211, 51, 51);
+}
+
+#min:hover
+{
+  background-color:#555;
+}
+
+
+#button_frame
+{
+  position:fixed;
+  bottom: 0;
+  background:#25273c;
+  height: 10%;
+  width: 100%;
+
+}
+
+#csvFileInput[type=file]
+{
+  display: none;
+}
+
+.custom_fileUpload
+{
+  background-color: #161722;
+  border: none;
+  color: #8d8daa;
+  padding: 15px 32px;
+  border-radius: 25px;
+  border-style: solid;
+  border-color: #000;
+  border-width: 1px;
+  top: 50%;
+  transform: translateY(-50%);
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  font-weight: bold;
+  margin: auto;
+  cursor: pointer;
+  position: absolute;
+  left: 5px;
+}
+
+.custom_fileUpload:hover
+{
+  color: white;
+  background:#0d0e18;
+}
+
+.button 
+{
+  background-color: #161722;
+  border: none;
+  color: #8d8daa;
+  padding: 15px 32px;
+  border-radius: 25px;
+  top: 50%;
+  transform: translateY(-50%);
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  font-weight: bold;
+  margin: auto;
+  cursor: pointer;
+  position: absolute;
+}
+
+#pred_btn
+{
+  position: absolute;
+  left: 155px;
+  border-style: solid;
+  border-color: #000;
+  border-width: 1px;
+}
+
+#pred_btn:hover
+{
+  color: white;
+  background:#0d0e18;
+}
+
+#anyl_btn
+{
+  position: absolute;
+  left: 975px;
+  top: 50%;
+  border-style: solid;
+  border-color: #000;
+  border-width: 1px;
+}
+
+#anyl_btn:hover
+{
+  color: white;
+  background:#0d0e18;
+}
+
+#search_btn
+{
+  position: absolute;
+  left: 580px;
+  top: 50%;
+  border-style: solid;
+  border-color: #000;
+  border-width: 1px;
+}
+
+#search_btn:hover
+{
+  color: white;
+  background:#0d0e18;
+}
+
+#search_id[type=text]
+{
+  background-color: #161722;
+  color:#8d8daa;
+  outline: none;
+  width: 200px;
+  font-size: 16px;
+  padding: 12px 20px 12px 40px;
+  border: none;
+  border-style: solid;
+  border-color: #000;
+  border-width: 1px;
+  margin-bottom: 12px;
+  transform: translateY(-50%);
+  left: 700px;
+  top: 50%;
+  border-radius: 25px;
+  position: absolute;
+  font-weight: bold;
+}
+
+#search_id:hover
+{
+  color: white;
+  background:#0d0e18; 
+}
+
+/* select box */
+select 
+{
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -ms-appearance: none;
+    appearance: none;
+    outline: 0;
+    box-shadow: none;
+    border: 0 !important;
+    background: #161722;
+    background-image: none;
+    font-weight: bold;
+    font-size: 16px;
+
+}
+  /* Remove IE arrow */
+select::-ms-expand 
+{
+    display: none;
+}
+/* Custom Select */
+.select 
+{
+  position: relative;
+  display: flex;
+  width: 15em;
+  height: 3em;
+  line-height: 3;
+  background: #161722;
+  overflow: hidden;
+  border-radius: 25px;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 300px;
+  border-style: solid;
+  border-color: #000;
+  border-width: 1px;
+}
+select 
+{
+    flex: 1;
+    padding: 15px;
+    color: #8d8daa;
+    cursor: pointer;
+}
+select:hover
+{
+  color: white;
+}
+/* Arrow */
+.select::after 
+{
+    content: '\25BC';
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 0 1em;
+    background: #11121b;
+    color: #8d8daa;
+    cursor: pointer;
+    pointer-events: none;
+    -webkit-transition: .25s all ease;
+    -o-transition: .25s all ease;
+    transition: .25s all ease;
+}
+/* Transition */
+.select:hover::after 
+{
+  color: white;
+}
+
+/* CSV Table */
+
+table {
+  border-collapse: collapse;
+  border-collapse: collapse;
+  /* box-shadow: 0 0 4px rgba(0, 0, 0, 0.25); */
+  overflow: hidden;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 14px;
+  color: #8d8daa;
+  text-align: center;
+  word-break: break-all;
+}
+
+thead
+{
+  position: sticky;
+}
+
+th {
+  background: #0d0e18;
+  color: #ffffff;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  z-index: 2;
+}
+
+th[scope=row] {
+  position: -webkit-sticky;
+  position: sticky;
+  left: 0;
+  z-index: 1;
+}
+
+th,td 
+{
+  border: 1px solid black;
+  padding: 10px 20px;
+}
+
+tr:hover
+{
+  background: #25273c;
+  color: white;
+}
+
+tr:nth-child(even) 
+{
+  background: #11121b;
+}
+
+#data_table
+{
+  position: absolute;
+  top: 5%;
+  left: 5%;
+  width: 90%;
+  height: 80%;
+  overflow: auto;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar
+{
+  width: 10px;
+  height: 10px;
+  background: #161722;
+  border-style: solid;
+  border-width: 1px;
+  opacity: 0.1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #888;
+  opacity: 0.1;
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+
+/* Analysis Chart */
+.analysis
+{
+  display: none;
+  color: white;
+}
