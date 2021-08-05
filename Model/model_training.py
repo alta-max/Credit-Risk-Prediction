@@ -21,6 +21,11 @@ test = pd.read_csv('Dataset/test_lAUu6dG.csv')
 train_og = train
 test_og = test
 
+# Filtering Loan defaulters
+
+new_dataset = train[train['Loan_Status']=='N']
+print(new_dataset)
+
 # Checking for missing values in train dataset
 train['Gender'].fillna(train['Gender'].mode()[0], inplace=True)
 train['Married'].fillna(train['Married'].mode()[0], inplace=True)
@@ -78,6 +83,8 @@ for i in range (100):
     print(i+1,'of 5')
     print(score)
     score_file.write(str(i+1)+' of 100 : '+str(score)+"\n")
+
+
 
 print("\nMax Score: "+str(max(score_lst))+"\nMin Score: "+str(min(score_lst))+"\nMean Score: "+str(sum(score_lst)/len(score_lst))+'\nBest Model: dTree_model_'+str(score_lst.index(max(score_lst))))
 score_file.write("\n\nMax Score: "+str(max(score_lst))+"\nMin Score: "+str(min(score_lst))+"\nMean Score: "+str(sum(score_lst)/len(score_lst))+'\nBest Model: dTree_model_'+str(score_lst.index(max(score_lst))))
